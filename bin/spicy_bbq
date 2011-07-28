@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ ! -d "$1" ]; then
+  echo "Usage: $0 directory";
+  echo "Encode a directory of assets into a single Javascript file to be "
+  echo "referenced in data URI format."
+  echo
+  echo "  directory - the directory of assets you wish to compress"
+  exit 1
+fi
+
+echo "window.SB = window.SB || {};"
+for asset in $1/*; do
+  filename=`basename $asset`
+  mimeType=`file --mime-type $asset | awk ' { print $2 } '`
+  base64=`base64 $asset`
+  echo "window.SB['$filename'] = \"data:$mimeType;base64,$base64\";"
+done
