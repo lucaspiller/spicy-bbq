@@ -4,7 +4,7 @@ Spicy BBQ is a simple script which will compress a directory of assets into a si
 
 ## Requirements
 
-The script is build in Bash script, and only uses common tools found on *nix systems. If you are on OSX or Linux it should just work. If it doesn't let me know why!
+Spicy BBQ is written in shell script, and only uses common tools found on nix systems. If you are on OS X or Linux it should just work. If it doesn't, let me know why!
 
 ## Usage
 
