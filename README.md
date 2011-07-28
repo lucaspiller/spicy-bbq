@@ -1,6 +1,6 @@
 # Spicy BBQ
 
-Spicy BBQ is a simple script which will compress a directory of assets into a single Javascript file. It encodes the assets using Data URI encoding which is supported by all modern browsers. It is aimed to be used in rich client Javascript applications, specifically with JST templates.
+Spicy BBQ is a simple script which will combine a directory of assets into a single Javascript file. It encodes the assets using Data URI encoding which is supported by all modern browsers. It is aimed to be used in rich client Javascript applications, specifically with JST templates.
 
 ## Requirements
 
