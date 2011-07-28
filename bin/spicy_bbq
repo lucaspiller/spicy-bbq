@@ -1,5 +1,7 @@
 #!/bin/sh
 
+IE_LIMIT=33554432
+
 if [ ! -d "$1" ]; then
   echo "Usage: $0 directory";
   echo "Encode a directory of assets into a single Javascript file to be "
@@ -14,5 +16,9 @@ for asset in $1/*; do
   filename=`basename $asset`
   mimeType=`file --mime-type $asset | awk ' { print $2 } '`
   base64=`base64 $asset`
+  filesize=`wc -c $asset | awk ' { print $1 } '`
+  if [ $filesize -gt $IE_LIMIT ]; then
+    echo "Warning: $filename has a size of $filesize bytes, this is above the filesize limit of 32KiB and will not render on IE 8 and below" 1>&2
+  fi
   echo "window.SB['$filename'] = \"data:$mimeType;base64,$base64\";"
 done
