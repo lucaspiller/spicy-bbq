@@ -16,6 +16,10 @@ Then in your Javascript, just pass the filename to SB, for example in a JST temp
 
     <img src="<%= SB['message_reply.png'] %>" alt="Reply" />
 
+## Install
+
+    sudo curl https://raw.github.com/lucaspiller/spicy-bbq/master/bin/spicy_bbq -o /usr/local/bin/spicy_bbq
+
 ## Contributing
 
 * Fork the project.
