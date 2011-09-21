@@ -15,7 +15,7 @@ echo "window.SB = window.SB || {};"
 for asset in $1/*; do
   filename=`basename $asset`
   mimeType=`file --mime-type $asset | awk ' { print $2 } '`
-  base64=`base64 $asset`
+  base64=`base64 $asset | perl -p -e 's/\s+$//g'`
   filesize=`wc -c $asset | awk ' { print $1 } '`
   if [ $filesize -gt $IE_LIMIT ]; then
     echo "Warning: $filename has a size of $filesize bytes, this is above the filesize limit of 32KiB and will not render on IE 8 and below" 1>&2
