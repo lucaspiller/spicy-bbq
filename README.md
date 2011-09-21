@@ -19,6 +19,7 @@ Then in your Javascript, just pass the filename to SB, for example in a JST temp
 ## Install
 
     sudo curl https://raw.github.com/lucaspiller/spicy-bbq/master/bin/spicy_bbq -o /usr/local/bin/spicy_bbq
+    sudo chmod +x /usr/local/bin/spicy_bbq
 
 ## Contributing
 
