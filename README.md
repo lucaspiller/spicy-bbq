@@ -20,6 +20,10 @@ Then in your Javascript, just pass the filename to SB, for example in a JST temp
 
     sudo curl https://raw.github.com/lucaspiller/spicy-bbq/master/bin/spicy_bbq -o /usr/local/bin/spicy_bbq
     sudo chmod a+x /usr/local/bin/spicy_bbq
+    
+If you are on OS X, you may also need:
+
+    brew install base64
 
 ## Contributing
 
